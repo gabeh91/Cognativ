@@ -6,9 +6,9 @@ import { getProductList } from '../../Actions/app';
 const Pagination = () => {
 
   const dispatch = useDispatch(),
-        appProps = useSelector(store => store.app),
-        nextUrl = appProps.productData?.next,
-        prevUrl = appProps.productData?.previous,
+        { productData } = useSelector(store => store.app),
+        nextUrl = productData?.next,
+        prevUrl = productData?.previous,
         [currentPage, setCurrentPage] = useState(1);
 
   const _prevPage = () => {
@@ -29,7 +29,6 @@ const Pagination = () => {
       }
       <span className="pagination__content">Page { currentPage }</span>
       {
-
         nextUrl !== null &&
         <span title="Next page" className="pagination__direction" onClick={ () => _nextPage() }><i className="fas fa-chevron-right"></i></span>
       }

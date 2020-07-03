@@ -2,6 +2,10 @@ import { API_ENDPOINT } from './Constants';
 
 export default class Helper {
 
+  /**
+   * Makes a fetch request to a specified url
+   * @return {Promise} The fetch promise object
+   */
   static makeRequest = (page, successCB, errorCB, finallyCB) => {
 
     const fetchConfig = {
@@ -28,8 +32,18 @@ export default class Helper {
 
   }
 
+  /**
+   * Calculates the total sum of all items in aray
+   * @param {number[]} number array of numbers
+   * @return {number} The sum of an array of numbers
+   */
   static getSum = priceArr => priceArr.reduce((a, b) => a + b);
 
+  /**
+   * Calculates the average of all items in aray
+   * @param {number[]} number array of numbers
+   * @return {number} The average of an array of numbers
+   */
   static getAverage = priceArr => (priceArr.reduce((a, b) => a + b, 0) / priceArr.length); 
 
 }
