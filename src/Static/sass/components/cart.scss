@@ -1,0 +1,33 @@
+@import '../variables/breakpoints.scss';
+@import '../variables/colours.scss';
+
+@import '../mixins/breakpoints.scss';
+
+.cart
+{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: -.5rem; right: 50%;
+  background-color: $primary-blue;
+  padding: 1rem;
+  color: $primary-white;
+  border-radius: .25rem;
+  cursor: default;
+  z-index: 5;
+
+  @include bp-small
+  {
+    width: 95%;
+  }
+  
+  &__text
+  {
+    margin-top: 0;
+
+    & ~ &
+    {
+      margin-top: .5rem;
+    }
+  }
+}

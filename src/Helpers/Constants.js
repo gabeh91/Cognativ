@@ -1,0 +1,10 @@
+export const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+
+export const APP_ACTIONS = Object.freeze({ // Freeze method simulating an enum
+
+  SET_LOADING_STATE: 'SET_LOADING_STATE',
+
+  GET_PRODUCT_LIST_SUCCESS: 'GET_PRODUCT_LIST_SUCCESS',
+  GET_PRODUCT_LIST_FAIL: 'GET_PRODUCT_LIST_FAIL'
+
+});

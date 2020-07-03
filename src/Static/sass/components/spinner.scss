@@ -1,0 +1,50 @@
+@import '../variables/colours.scss';
+
+@import '../mixins/spin.scss';
+
+.spinner
+{
+  font-size: .5rem;
+  text-indent: -9999em;
+  top: 35%; left: 35%;
+  width: 5rem; height: 5rem;
+  border-radius: 50%;
+  background: $primary-blue;
+  background: linear-gradient(to right, $primary-blue 10%, rgba(58,75,96, 0) 42%);
+  position: absolute;
+
+  @include spin;
+
+  &::before
+  {
+    width: 50%; height: 50%;
+    background: $primary-blue;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0; left: 0;
+    content: '';
+  }
+
+  &::after
+  {
+    background: #ccc;
+    width: 75%; height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+  }
+
+  &--main
+  {
+    top: 5rem; left: 43%;
+    width: 8rem; height: 8rem;
+
+    &::after
+    {
+      background: $primary-gray;
+    }
+  }
+}

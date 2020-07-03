@@ -1,0 +1,85 @@
+@import '../variables/breakpoints.scss';
+@import '../variables/colours.scss';
+
+@import '../mixins/breakpoints.scss';
+
+.pagination
+{
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem auto 0;
+  width: 70%;
+  max-width: 22rem;
+  background-color: $primary-white;
+  border: 1px solid darken($primary-white, 20%);
+  border-radius: .25rem;
+  color: lighten($primary-black, 20%);
+  user-select: none;
+  overflow: hidden;
+
+  @include bp-small
+  {
+    width: 95%;
+  }
+
+  &__direction
+  {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 3rem;
+    padding: .6rem .5rem;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+
+    .fas
+    {
+      font-size: 1.3rem;
+    }
+
+    &:hover
+    {
+      background-color: darken($primary-white, 8%);
+    }
+
+    &:first-of-type
+    { 
+      &::after
+      {
+        content: '';
+        position: absolute;
+        top: 50%; right: 0;
+        height: 50%;
+        width: 1px;
+        background-color: darken($primary-white, 20%);
+        transform: translateY(-50%);
+      }
+    }
+
+    &:last-of-type
+    {
+      &::before
+      {
+        content: '';
+        position: absolute;
+        top: 50%; left: 0;
+        height: 50%;
+        width: 1px;
+        background-color: darken($primary-white, 20%);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__content
+  {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    font-size: .9rem;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../variables/colours.scss';
+@import '../variables/font.scss';
+
+.mainview
+{
+  font-family: $font-family;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 50px 20px;
+  background-color: $primary-gray;
+  color: $primary-black;
+}

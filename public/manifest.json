@@ -1,0 +1,9 @@
+{
+  "short_name": "Cognativ code test",
+  "name": "Cognativ code test",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

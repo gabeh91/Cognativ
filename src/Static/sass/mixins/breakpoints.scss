@@ -1,0 +1,22 @@
+@import '../variables/breakpoints.scss';
+
+@mixin bp-large {
+  @media (max-width: $bp-large)
+  {
+    @content;
+  }
+}
+
+@mixin bp-med {
+  @media (max-width: $bp-med)
+  {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media (max-width: $bp-small)
+  {
+    @content;
+  }
+}
